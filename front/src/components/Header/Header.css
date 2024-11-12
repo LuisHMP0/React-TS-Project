@@ -1,0 +1,28 @@
+header ul, li, li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+header a:hover {
+    transition: 0.2s;
+    color: #B88E2F;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+}
+
+.books-h1 {
+    font-size: 34px;
+}
+
+.books-h1 img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
