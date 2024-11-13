@@ -1,0 +1,23 @@
+.MainImg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./imgs/library.jpg');    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.MainImg h1 {
+    font-weight: 400;
+    font-size: 48px;
+    position: absolute;
+    margin: 100px 0;
+}
+
+.MainImg p {
+    position: absolute;
+    margin: 180px 0;
+    font-weight: 500;
+}
