@@ -1,0 +1,36 @@
+.productTemplate {
+    height: 446px;
+    width: 285px;
+    cursor: pointer;
+}
+
+.productImg {
+    height: 310px;
+}
+
+.productImg img {
+    object-fit: cover;
+}
+
+.productProperties {
+    height: 125px;
+    background-color: #F4F5F7;
+    padding-top: 10px;
+}
+
+.productProperties h1, .productProperties h2, .productProperties p {
+    height: 40px;
+    margin-left: 30px;
+    color: #3A3A3A;
+}
+
+.productProperties h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.productProperties h2 { 
+    font-size: 16px;
+    font-weight: 400;
+    color: #898989;
+}

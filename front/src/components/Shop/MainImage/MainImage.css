@@ -14,10 +14,12 @@
     font-size: 48px;
     position: absolute;
     margin: 100px 0;
+    height: 0;
 }
 
 .MainImg p {
     position: absolute;
     margin: 180px 0;
     font-weight: 500;
+    height: 0;
 }

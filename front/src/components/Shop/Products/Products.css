@@ -1,0 +1,14 @@
+.filters {
+    height: 100px;
+    background-color: #F9F1E7;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    justify-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding-top: 80px;
+}
