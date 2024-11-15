@@ -18,7 +18,7 @@ const Products = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch('https://openlibrary.org/subjects/fiction.json?limit=40');
+        const response = await fetch('https://openlibrary.org/subjects/fiction.json?limit=16');
         const data = await response.json();
         
         const bookData = data.works.map((book: any) => ({
@@ -44,7 +44,7 @@ const Products = () => {
     <section className='filters'></section>
     <section className='products'>
       {isLoading
-        ? Array.from({ length: 8 }).map((_, index) => ( // Exibe 8 skeletons enquanto carrega
+        ? Array.from({ length: 16 }).map((_, index) => ( 
             <Product
               key={index}
               img=""
