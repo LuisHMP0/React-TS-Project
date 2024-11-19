@@ -3,9 +3,10 @@ header ul, header li, header li a {
     list-style-type: none;
     color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     transition: 0.3s;
+    margin: 10px 0;
 }
 header a:hover {
     transition: 0.2s;

@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import MainImage from './components/Shop/MainImage/MainImage'
 import Products from './components/Shop/Products/Products'
 import Footer from './components/Footer/Footer'
+import UniqueProduct from './components/UniqueProduct/UniqueProduct'
 
 function Shop() {
   return (
@@ -24,6 +25,16 @@ function Home() {
   )
 }
 
+function OnlyProduct() {
+  return (
+    <>
+    <Header /> 
+    <UniqueProduct />
+    <Footer />
+    </>
+  )
+}
+
 function App() {
   return (
     <>
@@ -31,6 +42,7 @@ function App() {
       <Routes>
         <Route path='/shop' element={<Shop />} />
         <Route path='/' element={<Home />} />
+        <Route path='/product/:id' element={<OnlyProduct />} />
       </Routes>
     </BrowserRouter>
     </>

@@ -10,6 +10,9 @@
 
 .productImg img {
     object-fit: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .productProperties {

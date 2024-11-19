@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react'
 
 
 type Book = {
+  id: string;
   title: string;
   author: string; 
   price: number;
@@ -22,6 +23,7 @@ const Products = () => {
         const data = await response.json();
         
         const bookData = data.works.map((book: any) => ({
+          id: book.key.split('/').pop(),
           title: book.title,
           author: book.authors && book.authors.length > 0 ? book.authors[0].name : 'Autor desconhecido',
           price: Math.floor(Math.random() * 100), 
@@ -47,6 +49,7 @@ const Products = () => {
         ? Array.from({ length: 16 }).map((_, index) => ( 
             <Product
               key={index}
+              id={index.toString()}
               img=""
               title=""
               author=""
@@ -57,6 +60,7 @@ const Products = () => {
         : books.map((book, index) => (
             <Product
               key={index}
+              id={book.id} 
               img={book.coverImage}
               title={book.title}
               author={book.author}

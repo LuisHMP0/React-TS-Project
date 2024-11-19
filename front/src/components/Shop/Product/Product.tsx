@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import './Product.css'
 import bookImg from './imgs/book.jpg'
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 
 type ProductProps = {
+    id: any;
     img: string;
     title: string;
     author: string;
@@ -11,7 +13,14 @@ type ProductProps = {
     isLoading: boolean;
 };
 
-const Product: React.FC<ProductProps> = ({img, title, author, price, isLoading}) => {
+
+const Product: React.FC<ProductProps> = ({id, img, title, author, price, isLoading}) => {
+
+const navigate = useNavigate();
+const goToUniqueProduct = () => {
+    navigate(`/product/${id}`)
+}
+
   return (
         <div className='productTemplate'>
             <div className='productImg'>
@@ -23,7 +32,7 @@ const Product: React.FC<ProductProps> = ({img, title, author, price, isLoading})
                 <p>{isLoading ? <Skeleton height={10} width={60} /> : 'R$' + price}</p>
             </div>
             <div className='details'>
-                <button className='seeDetails'> See Details </button>
+                <button onClick={goToUniqueProduct} className='seeDetails'> See Details </button>
             </div>
         </div>
   )
