@@ -95,10 +95,10 @@ const Products = () => {
       {/* Paginação */}
       <div className="pagination">
         <button onClick={goToPreviousBlock} disabled={currentBlock === 1}>
-          Previous Block
+          Previous
         </button>
         <button onClick={goToNextBlock} disabled={currentBlock * pagesPerBlock >= totalPages}>
-          Next Block
+          Next
         </button>
       </div>
     </>
