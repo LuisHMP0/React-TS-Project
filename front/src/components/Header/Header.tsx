@@ -14,12 +14,16 @@ const Header = () => {
     navigate('/');
   };
 
+  const goToAbout = () => {
+    navigate('/about')
+  }
+
   return (
     <header>
       <ul> 
         <li><a href='' onClick={goToHome} className='books-h1'> <img src={BooksLogo} alt="BooksLogo" /> Books</a></li>
         <li><a href='' onClick={goToHome} className='home-h2'>Home</a></li>
-        <li><a href='' className='about-h2'>About</a></li>
+        <li><a href='' onClick={goToAbout} className='about-h2'>About</a></li>
         <li><a href='' className='contact-h2'>Contact</a></li>
         <li><a href="" onClick={goToShop} className='shop-h2'>Shop</a></li>
       </ul>
