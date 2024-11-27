@@ -1,6 +1,7 @@
 import './UniqueProduct.css';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import ClipLoader from "react-spinners/ClipLoader";
 
 type Product = {
   title: string;
@@ -50,25 +51,32 @@ const UniqueProduct = () => {
     fetchProduct();
   }, [id]);
 
-  if (isLoading) return <p>Loading...</p>;
-  if (!product) return <p>Product is not found</p>;
+  if (isLoading) {
+    return (
+      <div className="spinner-container">
+        <ClipLoader size={50} />
+      </div>
+    );
+  }
+
+  if (!product) return <p>Product not found</p>;
 
   return (
     <section>
       <div className="productName">
         <p className="home"> Home <span> {'>'} </span> </p>
         <p className="shop"> Shop <span> {'>'} </span> </p>
-        <p className="title"> {product.title} </p>
+        <p className="title">{product?.title}</p>
       </div>
       <div className="uniqueProductTemplate">
         <div className="imgsUniqueProduct">
-          <img className='imgUniqueProduct' src={product.img} alt="productImg" />
+          <img className="imgUniqueProduct" src={product?.img} alt="productImg" />
         </div>
         <div className="uniqueProductDetails">
-          <h1>{product.title}</h1>
-          <p className="priceUniqueProduct"> R$ {product.price}</p>
-          <p className="authorUniqueProduct">{product.author}</p>
-          <p className="descriptionUniqueProduct">{product.description}</p>
+          <h1>{product?.title}</h1>
+          <p className="priceUniqueProduct">R$ {product?.price}</p>
+          <p className="authorUniqueProduct">{product?.author}</p>
+          <p className="descriptionUniqueProduct">{product?.description}</p>
           <button className="buyProduct">Buy Book</button>
         </div>
       </div>
@@ -77,4 +85,3 @@ const UniqueProduct = () => {
 };
 
 export default UniqueProduct;
-
