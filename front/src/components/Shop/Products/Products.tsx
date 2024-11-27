@@ -34,7 +34,7 @@ const Products = () => {
         }));
 
         setBooks(bookData);
-        setDisplayedBooks(bookData.slice(0, booksPerPage)); // Mostrando a primeira página
+        setDisplayedBooks(bookData.slice(0, booksPerPage)); 
       } catch (error) {
         console.error('Erro ao buscar livros:', error);
       } finally {
@@ -84,8 +84,8 @@ const Products = () => {
   return (
     <>
       <section className="filters">
-        <button onClick={() => sortBooks('asc')}>Ordem Alfabética (A-Z)</button>
-        <button onClick={() => sortBooks('desc')}>Ordem Alfabética (Z-A)</button>
+        <button onClick={() => sortBooks('asc')}>Alphabetical Order (A-Z)</button>
+        <button onClick={() => sortBooks('desc')}>Alphabetical Order (Z-A)</button>
       </section>
       <section className="products">
         {isLoading
