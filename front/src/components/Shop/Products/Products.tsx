@@ -49,23 +49,28 @@ const Products = () => {
     const nextPage = currentPage + 1;
     const startIndex = (nextPage - 1) * booksPerPage;
     const endIndex = startIndex + booksPerPage;
-
+  
     if (startIndex < books.length) {
       setDisplayedBooks(books.slice(startIndex, endIndex));
       setCurrentPage(nextPage);
+  
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
-
+  
   const handlePreviousPage = () => {
     const prevPage = currentPage - 1;
     const startIndex = (prevPage - 1) * booksPerPage;
     const endIndex = startIndex + booksPerPage;
-
+  
     if (prevPage > 0) {
       setDisplayedBooks(books.slice(startIndex, endIndex));
       setCurrentPage(prevPage);
+  
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
+  
 
   const sortBooks = (order: 'asc' | 'desc') => {
     const sortedBooks = [...books].sort((a, b) => {
